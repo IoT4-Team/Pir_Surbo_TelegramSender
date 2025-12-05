@@ -1,1 +1,410 @@
-[]
+[
+    {
+        "id": "d1ea13bb24642f67",
+        "type": "tab",
+        "label": "M-SRMS Door Lock",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "71a2b3c4d5e6",
+        "type": "group",
+        "z": "d1ea13bb24642f67",
+        "name": "Door Lock Automation (PIR & Schedule)",
+        "style": {
+            "label": true,
+            "color": "#ff6600",
+            "stroke": "#ff9900"
+        },
+        "nodes": [
+            "a1b2c3d4e5f6",
+            "g7h8i9j0k1l2",
+            "s9t0u1v2w3x4",
+            "y5z6a7b8c9d0",
+            "e0f1g2h3i4j5",
+            "q2r3s4t5u6v7",
+            "a4b5c6d7e8f9",
+            "a8a5bdd520fba0db",
+            "e481d49b1b3d44bb"
+        ],
+        "x": 124,
+        "y": 139,
+        "w": 962,
+        "h": 342
+    },
+    {
+        "id": "13f60e7c5dfa1d61",
+        "type": "io7-hub",
+        "name": "app",
+        "host": "mqtt",
+        "useTLS": true,
+        "knownPort": true,
+        "port": "1883",
+        "tls": "",
+        "clientid": ""
+    },
+    {
+        "id": "da5c67868cb1cb4f",
+        "type": "io7-hub",
+        "name": "app",
+        "host": "mqtt",
+        "useTLS": false,
+        "knownPort": true,
+        "port": "1883",
+        "tls": "",
+        "clientid": ""
+    },
+    {
+        "id": "d9778518ed9f8fee",
+        "type": "telegram bot",
+        "botname": "calender_iot_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "71d532b1526f728e",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "dabf3ef87108db93",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "7117d6f5eb10bb17",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "71d532b1526f728e",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "dabf3ef87108db93",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "fe8d57fd7fba081a",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "7117d6f5eb10bb17",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "9b244b18a8091a57",
+        "type": "io7-hub",
+        "name": "app",
+        "host": "mqtt",
+        "useTLS": false,
+        "knownPort": true,
+        "port": "1883",
+        "tls": "",
+        "clientid": ""
+    },
+    {
+        "id": "2fa99c2ed30bfb5c",
+        "type": "telegram bot",
+        "botname": "Red201_iot_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "a1b2c3d4e5f6",
+        "type": "io7 in",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "PIR Status In (pir_sensor)",
+        "deviceId": "pir_sensor",
+        "authentication": "13f60e7c5dfa1d61",
+        "evt": "status",
+        "fmt": "json",
+        "qos": "0",
+        "allDevices": false,
+        "allEvents": false,
+        "allFormats": false,
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "g7h8i9j0k1l2"
+            ]
+        ]
+    },
+    {
+        "id": "g7h8i9j0k1l2",
+        "type": "function",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "PIR & Schedule Lock Logic",
+        "func": "// Node-RED 플로우 변수에서 예약 상태를 읽습니다. (캘린더 연동 노드가 설정한다고 가정)\nconst isReserved = flow.get('IsReserved') || false; \nconst pirStatus = msg.payload.d.pir_status;\n\n// 1. 회의 중이고 (IsReserved = true), PIR이 감지된 경우 (Unlock)\nif (isReserved === true && pirStatus === 'on') {\n    // 노쇼 타이머를 리셋하고 문 잠금 해제 명령을 보냅니다.\n    node.status({fill:\"green\",shape:\"dot\",text:\"PIR ON: UNLOCK\"});\n    msg.payload = {\"d\": {\"door\": \"open\"}};\n    return [msg, null]; // 출력 1: 잠금 해제 명령, 출력 2: 노쇼 타이머 중단\n}\n\n// 2. 예약 시간이 아니거나 (IsReserved = false), 기타 상태\nif (isReserved === false) {\n    // PIR 감지 여부와 상관없이 문 잠금 상태 유지\n    node.status({fill:\"blue\",shape:\"dot\",text:\"NOT RESERVED: LOCKED\"});\n    msg.payload = {\"d\": {\"door\": \"close\"}};\n    return [msg, null]; // 출력 1: 잠금 명령, 출력 2: 없음\n}\n\n// 3. 회의 중이고 (IsReserved = true), PIR이 미감지된 경우 (Start/Reset NoShow Timer)\nif (isReserved === true && pirStatus === 'off') {\n    // 노쇼 타이머 시작/리셋 (10분 유예 시간 가정)\n    node.status({fill:\"yellow\",shape:\"dot\",text:\"PIR OFF: START NoShow TIMER\"});\n    // 타이머에 전송할 메시지 (노쇼 발생 시 실행될 메시지)\n    const noshowMsg = {\"payload\": {\"d\": {\"door\": \"close\"}, \"alert\": \"NoShow\"}};\n    return [null, noshowMsg]; // 출력 1: 없음, 출력 2: 타이머 메시지\n}\n\nreturn null;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "s9t0u1v2w3x4"
+            ],
+            [
+                "e481d49b1b3d44bb"
+            ]
+        ]
+    },
+    {
+        "id": "s9t0u1v2w3x4",
+        "type": "io7 out",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "authentication": "13f60e7c5dfa1d61",
+        "name": "Door Command (servo_door)",
+        "deviceId": "servo_door",
+        "cmd": "door",
+        "fmt": "json",
+        "qos": "0",
+        "retain": "false",
+        "x": 920,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "y5z6a7b8c9d0",
+        "type": "function",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "NoShow Alert Message",
+        "func": "// 노쇼가 최종 확인되면 문을 잠급니다.\nif (msg.payload.alert === 'NoShow') {\n    // 텔레그램으로 보낼 메시지 구성\n    msg.payload = {\n        chatId: \"YOUR_TELEGRAM_CHAT_ID\", // ⚠️ 실제 채팅 ID로 변경 필요\n        type: \"message\",\n        content: \"🚨 [노쇼 감지 및 자동 취소] 예약된 회의실에 10분간 움직임이 없어 예약이 취소되고 문이 잠겼습니다.\"\n    };\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "a8a5bdd520fba0db"
+            ]
+        ]
+    },
+    {
+        "id": "e0f1g2h3i4j5",
+        "type": "function",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "Lock Door (NoShow Action)",
+        "func": "// 노쇼가 최종 확인되면 문을 잠급니다.\nif (msg.payload.d.door === 'close') {\n    return {\"payload\": {\"d\": {\"door\": \"close\"}}};\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 440,
+        "wires": [
+            [
+                "s9t0u1v2w3x4"
+            ]
+        ]
+    },
+    {
+        "id": "q2r3s4t5u6v7",
+        "type": "change",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "Set flow.IsReserved",
+        "rules": [
+            {
+                "t": "set",
+                "p": "IsReserved",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4b5c6d7e8f9",
+        "type": "inject",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "Simulate RESERVED (true)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 180,
+        "wires": [
+            [
+                "q2r3s4t5u6v7"
+            ]
+        ]
+    },
+    {
+        "id": "a8a5bdd520fba0db",
+        "type": "telegram sender",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "",
+        "bot": "2fa99c2ed30bfb5c",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 970,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e481d49b1b3d44bb",
+        "type": "delay",
+        "z": "d1ea13bb24642f67",
+        "g": "71a2b3c4d5e6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "y5z6a7b8c9d0",
+                "e0f1g2h3i4j5"
+            ]
+        ]
+    }
+]
